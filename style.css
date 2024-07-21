@@ -1,0 +1,356 @@
+ * {
+    padding: 0;
+    margin: 0;
+} 
+body{
+     overflow-x: hidden; 
+}
+header{
+    background-image: url('assets/bgimg.jpg');
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+    
+}
+.navbar {
+    padding: 12px 20px;
+    display: flex;
+    justify-content:space-between;
+    gap: 10px;
+    background-color: transparent;
+    transition: background-color 0.5s ease;
+    position:sticky;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+   
+}
+.navbar.scrolled {
+    background-color: white;
+  }
+.brand{
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    font-weight: bold;
+}
+.but{
+    display: flex;
+    gap: 10px;
+    margin-right: 50px;
+    
+}
+
+.but1 {
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+
+}
+
+.but2 {
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+
+}
+.but2:hover{
+    background-color: #4d4a4a;
+}
+.logs {
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items:start;
+    gap: 30px; 
+    margin: 250px; 
+    position: relative;
+    right: 200px;
+
+}
+
+span{
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 50px;
+    font-weight: bold;
+  
+}
+.inputs {
+    display: flex;   
+    position: relative;
+    right:20px;
+    justify-content:start;
+    align-items:start;
+    gap: 10px; 
+}
+input {
+    border: none;
+    padding: 20px 150px;
+    background-image: url('assets/map.svg');
+    background-repeat: no-repeat;
+    background-position:15px 15px;
+}
+
+.a {
+    background-color: white;
+    padding: 20px 60px;
+    border: none;
+    cursor: pointer;
+    background-image: url('assets/clock.svg');
+    background-repeat: no-repeat;
+    background-position:15px 15px;
+}
+
+ .b{
+    background-color: black;
+    color: #fff;
+    padding: 20px 25px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+.b:hover{
+    background-color: #4d4a4a;
+}
+.imgs{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-direction:row;
+    gap: 40px;
+    margin: 80px;
+}
+.imgs img{
+    height: 300px;
+    width: 450px;
+}
+ h2{
+    margin: 50px;
+    font-size: 40px;
+    font-weight: 600;
+   font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.container2 img{
+    margin:0 20px;
+    padding: 0;
+    width: 96vw;
+}
+.city {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr ;
+    color: white;
+    margin:30px;
+    padding: 14px;
+}
+.city-name {
+    display:flex;
+    flex-direction:column;
+    gap: 30px;
+}
+.city-name a{
+    color: black;
+    text-decoration: none;
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+ .footer{
+ display: flex;
+}
+.links{
+    display: grid;
+    grid-template-columns:1fr 1fr ;
+    color: white;
+    padding: 14px;
+    margin: 20px 150px;
+    gap:50px;
+}
+.link-name {
+    display:flex;
+    flex-direction:column;
+    gap: 20px;
+   
+}
+.link-name a{
+    color: black;
+    text-decoration: none;
+    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.link-items img{
+    width: 150px;
+    position: relative;
+    top:200px;
+}
+.link-items{
+    margin: 20px 150px;
+
+}
+.foot2{
+    margin: 30px 150px;
+    display: flex;
+    gap: 20px;
+}
+.foot2 span{
+    position:relative;
+    bottom: 40px;
+    left: 350px;
+
+}
+.foot2 span a{
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+}
+.text span{
+    position:relative;
+    bottom: 60px;
+    left: 500px;
+    font-size: 16px;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    
+}
+/* Responsiveness */
+@media (max-width: 1200px) {
+    .imgs {
+        flex-direction: column;
+        margin: 40px;
+    }
+    header{
+        background-size: cover;
+        width: 100vw;
+    }
+
+    .imgs img {
+        width: 100%;
+        height: auto;
+    }
+
+    .city {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .links {
+        grid-template-columns: 1fr 1fr ;
+        margin: 20px;
+    }
+
+    .foot2 span {
+        left: 0;
+    }
+
+    .text span {
+        left: 0;
+        text-align: center;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    header{
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .brand {
+        font-size: 20px;
+    }
+
+    .but {
+        margin-right: 0;
+    }
+
+    .logs {
+        margin: 150px 20px;
+        right: 0;
+        text-align: center;
+    }
+
+    .logs span {
+        font-size: 30px;
+    }
+
+    .inputs {
+        flex-direction: column;
+        gap: 10px;
+        right: 0;
+    }
+
+    input {
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .a, .b {
+        padding: 10px 20px;
+        width: 100%;
+    }
+
+    .city {
+        grid-template-columns: 1fr;
+    }
+
+    .foot2 {
+        flex-direction: column;
+    }
+
+    .foot2 span {
+        left: 0;
+        bottom: 0;
+    }
+
+    .text span {
+        left: 0;
+        bottom: 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .brand {
+        font-size: 18px;
+    }
+    header{
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .but1, .but2 {
+        padding: 5px 10px;
+    }
+
+    .logs {
+        margin: 100px 10px;
+    }
+
+    .logs span {
+        font-size: 20px;
+    }
+
+    .inputs {
+        gap: 5px;
+    }
+
+    input, .a, .b {
+        padding: 10px;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin: 20px;
+    }
+
+    .links, .link-items, .foot2, .text span {
+        margin: 10px;
+        text-align: center;
+    }
+}
